@@ -1,6 +1,3 @@
-# Krampus
-Team Krampus NoSQL Project
-
 Krampus: Team Krampus NoSQL Project
 ===================================
 
