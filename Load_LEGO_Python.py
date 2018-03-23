@@ -69,4 +69,13 @@ def load_all():
 
     print('Total Loading Time: ' + str(datetime.datetime.now() - start_time))
 
+    print('Creating indexes... Start time: ' + datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S:%f"))
+    graph.run("CREATE CONSTRAINT ON (t:Theme) ASSERT t.id IS UNIQUE")
+    graph.run("CREATE CONSTRAINT ON (y:Year) ASSERT y.id IS UNIQUE")
+    graph.run("CREATE CONSTRAINT ON (s:Set) ASSERT s.id IS UNIQUE")
+    graph.run("CREATE CONSTRAINT ON (p:Part) ASSERT p.id IS UNIQUE")
+    graph.run("CREATE CONSTRAINT ON (c:PartCategory) ASSERT c.id IS UNIQUE")
+    graph.run("CREATE INDEX ON :Theme(parent_id)")
+    print('Indexes complete. End time: ' + datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S:%f") + '\n')
+
 load_all()
