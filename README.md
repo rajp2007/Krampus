@@ -16,7 +16,7 @@ Starting Neo4J and loading LEGO Data
 
 4. In a second terminal window, execute the following command:
 
-`docker run --net=“host” andyartz/lego:loadlego`
+`docker run --net="host" andyartz/lego:loadlego`
 
 5. Wait for the command to finish executing and display the message:
 
